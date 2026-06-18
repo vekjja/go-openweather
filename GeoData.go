@@ -8,7 +8,11 @@ import (
 )
 
 type GeoData []struct {
-	Name       string `json:"name"`
+	Name       string  `json:"name"`
+	Lat        float64 `json:"lat"`
+	Lon        float64 `json:"lon"`
+	Country    string  `json:"country"`
+	State      string  `json:"state"`
 	LocalNames struct {
 		Ms          string `json:"ms"`
 		Gu          string `json:"gu"`
@@ -159,10 +163,6 @@ type GeoData []struct {
 		Ka          string `json:"ka"`
 		Ur          string `json:"ur"`
 	} `json:"local_names"`
-	Lat     float64 `json:"lat"`
-	Lon     float64 `json:"lon"`
-	Country string  `json:"country"`
-	State   string  `json:"state"`
 }
 
 // GetGeoData: Get GeoData from OpenWeatherMap API
